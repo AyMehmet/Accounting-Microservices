@@ -15,7 +15,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.4.RELEASE</version>
+        <version>3.1.0 </version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -26,11 +26,11 @@
     <description>Accounting_Microservices</description>
     <properties>
         <java.version>22</java.version>
-        <spring-boot.version>3.0.2</spring-boot.version>
+        <spring-boot.version>3.1.0</spring-boot.version>
         <modelmapper.version>2.3.9</modelmapper.version>
         <lombok.version>1.18.22</lombok.version>
-
-
+        <spring-boot-starter-validation.version>3.1.0</spring-boot-starter-validation.version>
+        <jakarta-validation-api.version>3.1.0</jakarta-validation-api.version>
         <spring-cloud.version>2.2.6.RELEASE</spring-cloud.version>
         <jackson-bom.version>2.18.0</jackson-bom.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
@@ -102,13 +102,16 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-starter-validation</artifactId>-->
-<!--                <version>${jakarta-validation.version}</version>-->
-<!--            </dependency>-->
+
 
             <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation -->
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-validation</artifactId>
+                <version>${spring-boot-starter-validation.version}</version>
+            </dependency>
+
 
 <!--            <dependency>-->
 <!--                <groupId>jakarta.persistence</groupId>-->
@@ -121,13 +124,23 @@
                 <version>${jakarta-validation-api.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-core</artifactId>
+                <version>${spring-security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-oauth2-client</artifactId>
+                <version>6.0.1</version>
+            </dependency>
+
 
 <!--            <dependency>-->
 <!--                <groupId>org.springframework.boot</groupId>-->
 <!--                <artifactId>spring-boot-starter-validation</artifactId>-->
 <!--                <version>${hibernate-validator.version}</version>-->
 <!--            </dependency>-->
-
 
 <!--            <dependency>-->
 <!--                <groupId>jakarta.validation</groupId>-->

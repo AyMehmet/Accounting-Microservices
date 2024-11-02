@@ -23,12 +23,12 @@ public class UserResponseWrapperDto {
         this.success = true;
         this.message = message;
         this.code = httpStatus.value();
-        this.data = data;
+        this.data = (UserDto) data;
     }
     public UserResponseWrapperDto(String message, Object data) {
         this.success = true;
         this.message = message;
-        this.data = data;
+        this.data = (UserDto) data;
     }
 
     public UserResponseWrapperDto(String message, HttpStatus httpStatus) {
