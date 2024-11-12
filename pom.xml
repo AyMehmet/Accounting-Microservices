@@ -10,6 +10,7 @@
         <module>user-service</module>
         <module>company-service</module>
         <module>client-management</module>
+        <module>discovery-service</module>
     </modules>
 
     <parent>
@@ -87,6 +88,12 @@
                 <artifactId>spring-cloud-starter-openfeign</artifactId>
                 <version>${spring-cloud.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+                <version>${spring-cloud.version}</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
